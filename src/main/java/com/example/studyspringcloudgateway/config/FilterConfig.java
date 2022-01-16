@@ -1,19 +1,18 @@
 package com.example.studyspringcloudgateway.config;
 
-import com.netflix.discovery.converters.Auto;
-import io.netty.resolver.DefaultAddressResolverGroup;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.gateway.route.RouteLocator;
 import org.springframework.cloud.gateway.route.builder.RouteLocatorBuilder;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import reactor.netty.http.client.HttpClient;
 
-@Configuration
+/**
+ * 다시 yml 로 등록
+ */
+//@Configuration
 public class FilterConfig {
 
 
-    @Bean
+    //@Bean
     public RouteLocator gatewayRoutes(RouteLocatorBuilder builder) {
         return builder.routes()
                 .route(r->r.path("/first-service/**")
