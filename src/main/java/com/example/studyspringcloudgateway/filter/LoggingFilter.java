@@ -54,7 +54,7 @@ public class LoggingFilter extends AbstractGatewayFilterFactory<LoggingFilter.Co
                     log.info("Logging POST Filter End : response code -> {}", response.getStatusCode());
                 }
             }));
-        }, Ordered.HIGHEST_PRECEDENCE);
+        }, Ordered.HIGHEST_PRECEDENCE); // Ordered.HIGHEST_PRECEDENCE -> 가장 높은 순서로 적용
 
         return filter;
     }
